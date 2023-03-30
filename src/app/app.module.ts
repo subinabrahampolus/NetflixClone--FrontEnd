@@ -8,6 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {HttpClientModule} from  '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

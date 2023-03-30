@@ -11,4 +11,6 @@ export class HeaderComponent {
   signin() {
     this.router.navigateByUrl('/signin');
   }
+  headerStyle = 'blue';
+  headerButtons = ['Button 1', 'Button 2'];
 }

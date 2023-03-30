@@ -1,6 +1,7 @@
 .header {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 .icon {
   width: 100%;
@@ -10,7 +11,7 @@
 .icon img {
   float: left;
   display: inline;
-  width: 15%;
+  width: 20%;
 }
 .dropdown {
   float: right;
