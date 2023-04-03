@@ -8,14 +8,30 @@ import { ServiceService } from '../services/service.service';
 })
 export class DashboardComponent {
   constructor(private service: ServiceService) {
-    this.bannerApi()
+    // this.bannerApi()
+    this.trendingMovies()
   }
   bannerApiData: any = []
+  trendingMoviesData:any = []
   bannerApi() {
     this.service.bannerApiData().subscribe((result) => {
       this.bannerApiData = result.results;
-      console.log(this.bannerApiData);
+      // console.log(this.bannerApiData);
     })
   }
+  trendingMovies(){
+    this.service.trendingMovieData().subscribe((result)=>{
+      this.trendingMoviesData = result.results
+      console.log(this.trendingMoviesData);
+      
+    })
+  }
+  // movieApi(){
+  //   this.service.getMovieDetails().subscribe((result:any)=>{
+  //     this.bannerApiData = result.results
+  //     console.log(this.bannerApiData);
+      
+  //   })
+  // }
 
 }
